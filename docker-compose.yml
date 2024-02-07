@@ -1,0 +1,30 @@
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
+
+version: '3'
+
+services:
+
+  nginx:
+    build:
+      dockerfile: Docker/nginx/Dockerfile
+    volumes:
+      - ./:/app
+
+    depends_on:
+      - php
+    ports:
+      - 8003:8003
+
+  node:
+    build:
+      dockerfile: Docker/node/Dockerfile
+    volumes:
+      - './:/app'
+    working_dir: /app
+    command: bash -c "npm install && npm run watch" # install and run watch for npm (if it work)
+
+
+
+volumes:
+  db-data:
