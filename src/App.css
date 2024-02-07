@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.thumbnail{
+  width:150px; height:100px; background: rgb(8,39,164); background: linear-gradient(140deg, rgba(8,39,164,1) 29%, rgba(10,123,163,1) 100%);
+}
+
+.thumbnail a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.thumbnail a svg path{
+  stroke: azure;
+  fill: azure;
+}
+.video{
+  background-color: black;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
