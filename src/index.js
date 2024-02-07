@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { App, Video } from './App';
 import reportWebVitals from './reportWebVitals';
+import toto from './ex3' ;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const video = {
@@ -24,8 +25,17 @@ const car = {
     year: 2018
   }
 }
+var array = []
+array.push()
 const year = car.propAccess('modele.year');
-const toto = "{{modele.year}}".toto(car);
-console.log(toto);
+const exo2 = "{{modele.year}}".toto(car);
+
+console.log(toto(false, "boolean"));
+console.log(toto(74, "number"));
+console.log(toto("test", "string"));
+console.log(toto(undefined, "undefined"));
+console.log(toto(car, "object"));
+console.log(toto(array, "array"));
+console.log(toto(null, "null"));
 
 reportWebVitals();
